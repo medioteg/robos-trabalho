@@ -109,25 +109,6 @@
     .advantage-list li::marker { color: var(--lime); }
     .challenge-list li::marker { color: var(--orange); }
     .icon-box { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; background: rgba(211,243,107,.12); font-size: 1.25rem; margin-bottom: 17px; }
-    .perspective { margin-top: 20px; padding: 28px; border-radius: var(--radius); background: linear-gradient(115deg, rgba(119,215,232,.12), rgba(211,243,107,.08)); border: 1px solid rgba(119,215,232,.2); }
-    .perspective p { color: #d0d9e5; margin-bottom: 0; }
-    .perspective strong { color: var(--lime); }
-    .quiz-box { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; align-items: center; border-radius: 28px; padding: 38px; background: var(--panel); border: 1px solid var(--line); }
-    .quiz-box h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
-    .quiz-box > div > p { color: var(--muted); }
-    .quiz-question { font: 600 1.15rem "Space Grotesk", sans-serif; margin-bottom: 18px; }
-    .quiz-choices { display: flex; gap: 10px; flex-wrap: wrap; }
-    .quiz-choice { border: 1px solid var(--line); background: transparent; padding: 10px 16px; border-radius: 11px; cursor: pointer; }
-    .quiz-choice:hover { border-color: var(--lime); }
-    .quiz-choice:disabled { cursor: default; opacity: .8; }
-    .quiz-choice.correct-choice { border-color: var(--lime); color: var(--lime); }
-    .quiz-choice.wrong-choice { border-color: var(--orange); color: var(--orange); }
-    .quiz-progress { color: var(--cyan); font-size: .82rem; font-weight: 700; margin-bottom: 12px; }
-    .quiz-action[hidden] { display: none; }
-    .quiz-result { color: var(--lime); font: 600 1.2rem "Space Grotesk", sans-serif; margin: 16px 0; }
-    .quiz-feedback { min-height: 48px; color: var(--muted); margin: 15px 0 0; font-size: .9rem; }
-    .quiz-feedback.correct { color: var(--lime); }
-    .quiz-feedback.incorrect { color: var(--orange); }
     .sources { padding: 42px 0; border-top: 1px solid var(--line); background: #0c1423; }
     .sources h2 { font-size: 1.4rem; letter-spacing: -.02em; }
     .sources p, .sources li { color: var(--muted); font-size: .82rem; }
@@ -142,7 +123,6 @@
       .card-grid { grid-template-columns: repeat(2, 1fr); }
       .section-head { display: block; }
       .search { margin-top: 20px; }
-      .quiz-box { grid-template-columns: 1fr; gap: 16px; }
     }
     @media (max-width: 620px) {
       .wrap { width: min(100% - 28px, 1120px); }
@@ -162,7 +142,6 @@
       section { padding: 62px 0; }
       .card-grid, .context-grid { grid-template-columns: 1fr; }
       .card-image { height: 210px; }
-      .quiz-box { padding: 24px 20px; }
       .footer-row { flex-direction: column; gap: 5px; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -178,7 +157,6 @@
       <div class="nav-links" id="nav-links">
         <a href="#robos">Robôs por área</a>
         <a href="#impactos">Impactos no trabalho</a>
-        <a href="#quiz">Mito ou fato?</a>
       </div>
     </nav>
   </header>
@@ -232,87 +210,79 @@
         </div>
         <p id="results-status" class="sr-only" aria-live="polite"></p>
         <div class="card-grid" id="robot-grid">
-          <article class="robot-card" data-category="saude" data-search="saúde medicina hospital cirúrgico da vinci 5 cirurgia">
+          <article class="robot-card" data-category="saude" data-search="saúde medicina hospital cirúrgico da vinci xi cirurgia">
             <div class="card-image"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Equipe médica em ambiente hospitalar" loading="lazy"><span class="category">Saúde</span></div>
             <div class="card-body">
-              <h3>da Vinci 5 — cirurgia assistida</h3>
-              <p>O robô cirúrgico da Vinci 5 representa a nova geração de sistemas para cirurgias minimamente invasivas, integrando maior poder de processamento, visão 3D em alta definição e sensibilidade tátil inédita. Essa tecnologia permite que o cirurgião perceba a pressão exercida pelos instrumentos, o que minimiza danos aos tecidos e promove uma recuperação mais rápida ao paciente.</p>
+              <h3>Medicina e cirurgia</h3>
+             <p>O <strong>da Vinci Xi</strong> é um sistema robótico cirúrgico de 4ª geração que amplia a precisão do médico em cirurgias minimamente invasivas por meio de visão 3D HD ampliada e quatro braços articulados suspensos com filtragem de tremor. Ele melhora a ergonomia ao permitir que o cirurgião opere sentado, agiliza o preparo da sala cirúrgica e exige alta capacitação técnica de toda a equipe hospitalar.</p>
               <div class="impact">
                 <strong>Impacto no trabalho:</strong>
-                <ul class="impact-list">
-                  <li><strong>Maior autonomia do cirurgião.</strong> Controla funções da sala pelo console, reduzindo a dependência de assistentes.</li>
-                  <li><strong>Menos desgaste físico.</strong> A nova ergonomia diminui a fadiga e o esforço em cirurgias longas.</li>
-                  <li><strong>Treinamento acelerado.</strong> A inteligência artificial analisa os movimentos para capacitar novos médicos mais rápido.</li>
-                  <li><strong>Nova qualificação técnica.</strong> Exige treinamento contínuo das equipes de enfermagem para operar e manter o sistema.</li>
-                </ul>
+               O <strong>da Vinci XI</strong> melhora a ergonomia ao permitir que o cirurgião opere sentado com precisão ampliada, agiliza o preparo da sala cirúrgica e exige treinamento especializado de toda a equipe hospitalar.
               </div>
-              <a class="video-link" href="https://www.youtube.com/watch?v=xGqW35dcC4I" target="_blank" rel="noopener noreferrer">▶ Ver demonstração oficial no YouTube</a>
+              <a class="video-link" href="https://youtu.be/DPcp7RE8iB4?si=uqHQx32yV3K6gGsN" target="_blank" rel="noopener noreferrer">▶ Assistir no YouTube</a>
             </div>
           </article>
           <article class="robot-card" data-category="industria" data-search="indústria fábrica industrial braço montagem solda">
             <div class="card-image"><img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Linha de produção industrial" loading="lazy"><span class="category">Indústria</span></div>
             <div class="card-body">
               <h3>Braços robóticos industriais</h3>
-              <p>Soldam, pintam, montam peças e movimentam materiais em linhas de produção. Em geral, são programados para tarefas repetitivas e delimitadas.</p>
-              <div class="impact"><strong>Impacto no trabalho:</strong> reduzem exposição a atividades perigosas; podem transformar funções e criar demanda por programação e manutenção.</div>
-              <a class="video-link" href="https://www.youtube.com/watch?v=QCkl9RMd5-s" target="_blank" rel="noopener noreferrer">▶ Assistir robôs industriais soldando</a>
+              <p>O <strong>FANUC M-410iB</strong> é uma linha de robôs industriais articulados de 4 ou 5 eixos projetada especificamente para paletização e movimentação rápida de materiais em fins de linha. Com modelos que suportam de 140 kg a 700 kg e alcance de até 3,14 metros, ele empilha cargas pesadas em alta velocidade e de forma contínua, eliminando o esforço físico repetitivo dos trabalhadores e aumentando a agilidade na logística.</p>
+              <div class="impact"><strong>Impacto no trabalho:</strong> O <strong>FANUC M-410iB</strong> melhora a saúde e a ergonomia ao eliminar o levantamento manual de cargas pesadas, acelera o fim de linha sem fadiga ou gargalos na expedição e transforma funções braçais em cargos técnicos de programação, operação e manutenção.</div>
+              <a class="video-link" href="https://www.youtube.com/watch?v=LOW5-o-gPUA" target="_blank" rel="noopener noreferrer">▶ Assistir no YouTube</a>
             </div>
           </article>
           <article class="robot-card" data-category="agricultura" data-search="agricultura campo agrícola plantio colheita pulverização robô">
             <div class="card-image"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Plantação em campo agrícola" loading="lazy"><span class="category">Agricultura</span></div>
             <div class="card-body">
               <h3>Robôs agrícolas de campo</h3>
-              <p>O robô da Tortuga AgTech é uma máquina agrícola autônoma equipada com inteligência artificial e dois braços robóticos que navega sozinha pelas lavouras para colher frutas delicadas, como morangos e uvas, sem danificá-las, além de combater pragas com luz UV e suprir a falta de mão de obra no campo.</p>
-              <div class="impact"><strong>Impacto no trabalho:</strong> • Fim do gargalo de mão de obra: Assume a colheita repetitiva para suprir a falta de trabalhadores e evitar perdas na safra.
-• Vagas mais qualificadas: Substitui o esforço braçal por funções técnicas, como operadores de robôs e analistas de dados.
-• Melhores condições no campo: Poupa os trabalhadores de tarefas fisicamente exaustivas e de longas jornadas sob o sol.
-• Produção contínua: Opera inclusive à noite, reduzindo a dependência de contratações sazonais.</div>
-              <a class="video-link" href="https://www.youtube.com/watch?v=rOh7dQ1zhbA" target="_blank" rel="noopener noreferrer">▶ Assistir robô agrícola Tortuga AgTech</a>
+              <p>O <strong>robô agrícola Tortuga</strong> é uma plataforma autônoma com inteligência artificial e visão computacional projetada para colher frutas delicadas, como morangos e uvas, em estufas sem danificá-las. Ele atua de forma elétrica, dia e noite, realizando também poda, controle de pragas com luz UV e previsão de safra, o que ajuda a suprir a escassez de mão de obra rural e reduz o esforço físico repetitivo dos trabalhadores.</p>
+              <div class="impact"><strong>Impacto no trabalho:</strong> O <strong>robô agrícola Tortuga</strong> combate a escassez de mão de obra ao colher frutas continuamente, melhora a saúde e a ergonomia ao eliminar o esforço repetitivo sob o calor das estufas e transforma o trabalhador braçal em supervisor tecnológico de frotas e dados do cultivo.</div>
+              <a class="video-link" href="https://www.youtube.com/watch?v=l54ZrTj0KPc" target="_blank" rel="noopener noreferrer">▶ Assistir no YouTube</a>
             </div>
           </article>
           <article class="robot-card" data-category="logistica" data-search="logística armazém estoque entrega transporte warehouse">
             <div class="card-image"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Centro de distribuição e logística" loading="lazy"><span class="category">Logística</span></div>
             <div class="card-body">
               <h3>Robôs móveis de armazém</h3>
-              <p>Robôs autônomos transportam prateleiras, caixas ou materiais entre áreas de centros de distribuição. Sensores ajudam a navegar por espaços compartilhados.</p>
-              <div class="impact"><strong>Impacto no trabalho:</strong> automatizam parte do transporte interno; pessoas organizam operações, cuidam de exceções e mantêm os sistemas.</div>
-              <a class="video-link" href="https://www.youtube.com/watch?v=ULswQgd73Tc" target="_blank" rel="noopener noreferrer">▶ Assistir robôs de armazém em ação</a>
+              <p>O <strong>Amazon Proteus</strong> é o primeiro robô móvel totalmente autônomo (AMR) da Amazon projetado para trabalhar livremente ao lado de pessoas em centros de distribuição, sem necessidade de áreas isoladas. Equipado com sensores avançados e inteligência artificial que entende linguagem natural, ele ergue e transporta carrinhos de carga de até 400 kg, reduzindo o esforço físico intenso dos trabalhadores e deslocando a equipe para funções de gestão e conferência logística.</p>
+              <div class="impact"><strong>Impacto no trabalho:</strong> O <strong>Amazon Proteus</strong> melhora a ergonomia ao eliminar o transporte manual de carrinhos de até 400 kg, facilita a colaboração segura ao entender linguagem natural sem exigir treinamento complexo e desloca os trabalhadores para funções de conferência e gestão logística.</div>
+              <a class="video-link" href="https://www.youtube.com/watch?v=AmmEbYkYfHY" target="_blank" rel="noopener noreferrer">▶ Assistir no YouTube</a>
             </div>
           </article>
           <article class="robot-card" data-category="lar" data-search="lar doméstico casa aspirador robô limpeza">
             <div class="card-image"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Pessoa realizando tarefas de limpeza doméstica" loading="lazy"><span class="category">Lar</span></div>
             <div class="card-body">
               <h3>Robôs domésticos</h3>
-              <p>Aspiradores robóticos mapeiam cômodos e limpam pisos. Outros aparelhos automatizam tarefas simples, como cortar grama ou auxiliar no monitoramento da casa.</p>
-              <div class="impact"><strong>Impacto no trabalho:</strong> automatizam tarefas domésticas específicas; não substituem o conjunto de cuidados, organização e decisões de uma casa.</div>
-              <a class="video-link" href="https://www.youtube.com/watch?v=VPNQxulK4mE" target="_blank" rel="noopener noreferrer">▶ Assistir demonstração do Roomba</a>
+              <p>O <strong>iRobot Roomba</strong> é uma linha de robôs aspiradores domésticos autônomos equipada com sensores LiDAR e inteligência artificial para mapear ambientes, desviar de obstáculos, aspirar e passar pano sozinha, inclusive esvaziando e lavando seus próprios componentes na base. Ele economiza tempo nas tarefas domésticas diárias e libera profissionais de limpeza para higienizações mais detalhadas.</p>
+              <div class="impact"><strong>Impacto no trabalho:</strong> O <strong>iRobot Roomba</strong> economiza horas de trabalho doméstico ao automatizar a limpeza diária dos pisos, libera profissionais de conservação para tarefas mais detalhadas e substitui a varrição manual por cuidados simples de manutenção do aparelho.</div>
+              <a class="video-link" href="https://www.youtube.com/watch?v=mRYIE_jcVGE" target="_blank" rel="noopener noreferrer">▶ Assistir no YouTube</a>
             </div>
           </article>
           <article class="robot-card" data-category="espaco" data-search="espaço espacial nasa marte rover perseverance exploração">
             <div class="card-image"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Terra vista do espaço" loading="lazy"><span class="category">Espaço</span></div>
             <div class="card-body">
               <h3>Rovers de exploração espacial</h3>
-              <p>Veículos como o Perseverance, da NASA, percorrem Marte, capturam imagens e analisam rochas. A comunicação com a Terra tem atraso, então eles executam comandos e tarefas planejadas.</p>
-              <div class="impact"><strong>Impacto no trabalho:</strong> ampliam a exploração em locais perigosos ou distantes; cientistas e engenheiros planejam e interpretam os dados.</div>
-              <a class="video-link" href="https://www.youtube.com/watch?v=SAPaWLQbU_s" target="_blank" rel="noopener noreferrer">▶ Ver o rover Perseverance em ação</a>
+              <p>O <strong>Perseverance</strong> é um robô explorador (<em>rover</em>) autônomo da NASA que opera em Marte desde 2021 para buscar sinais de vida antiga, estudar a geologia local e coletar amostras de rochas. Equipado com navegação por inteligência artificial, braço robótico, espectrômetros e até um experimento que produziu oxigênio marciano, ele atua como um laboratório móvel remoto que permite aos cientistas explorar o planeta com segurança à distância.</p>
+              <div class="impact"><strong>Impacto no trabalho:</strong> O <strong>Perseverance</strong> elimina riscos à vida humana ao explorar Marte remotamente, permite que cientistas foquem na análise estratégica graças à navegação autônoma por inteligência artificial e impulsiona carreiras de alta qualificação em engenharia, robótica e ciência de dados.</div>
+              <a class="video-link" href="https://www.youtube.com/watch?v=SAPaWLQbU_s&list=PL2aBZuCeDwlRF14ds9UR1uVpLRjDQy7d5" target="_blank" rel="noopener noreferrer">▶ Assistir no YouTube</a>
             </div>
           </article>
           <article class="robot-card" data-category="construcao" data-search="construção obra robô construção civil impressão 3d">
             <div class="card-image"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Trabalhadores em um canteiro de obras" loading="lazy"><span class="category">Construção</span></div>
             <div class="card-body">
               <h3>Robôs para construção</h3>
-              <p>Equipamentos robotizados podem auxiliar na inspeção, demolição controlada, perfuração e impressão 3D de estruturas, conforme o projeto e o local.</p>
-              <div class="impact"><strong>Impacto no trabalho:</strong> podem reduzir exposição a áreas de risco; planejamento, segurança e supervisão continuam essenciais.</div>
-              <a class="video-link" href="https://www.youtube.com/watch?v=gNDWKbgQEWU" target="_blank" rel="noopener noreferrer">▶ Assistir robô de construção da ICON</a>
+              <p>O <strong>Hadrian X</strong> é um robô autônomo de construção civil montado em caminhão que ergue paredes de casas e edifícios a partir de projetos digitais, assentando até 360 blocos por hora com um braço telescópico de 32 metros. Ele elimina o levantamento manual de blocos pesados, acelera drasticamente a entrega de obras, reduz o desperdício de materiais e transforma o trabalho no canteiro ao substituir o esforço braçal contínuo pela operação tecnológica e supervisão.</p>
+              <div class="impact"><strong>Impacto no trabalho:</strong> O <strong>Hadrian X</strong> melhora a segurança ao eliminar o levantamento de blocos pesados e o trabalho em andaimes, acelera obras para suprir a escassez de pedreiros e transforma o trabalho braçal no canteiro em funções de operação tecnológica e acabamento.</div>
+              <a class="video-link" href="https://www.youtube.com/watch?v=wPhRb2AF92I" target="_blank" rel="noopener noreferrer">▶ Assistir no YouTube</a>
             </div>
           </article>
           <article class="robot-card" data-category="saude" data-search="hospital enfermagem entrega remédios robô hospitalar serviço">
             <div class="card-image"><img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Profissional de saúde em um hospital" loading="lazy"><span class="category">Saúde</span></div>
             <div class="card-body">
               <h3>Robôs de serviço hospitalar</h3>
-              <p>Robôs móveis podem levar medicamentos, amostras e roupas entre setores. Eles apoiam a logística interna, mas não substituem o cuidado e a avaliação clínica.</p>
-              <div class="impact"><strong>Impacto no trabalho:</strong> podem liberar tempo de deslocamento para equipes; profissionais continuam responsáveis pelo atendimento e pelas decisões.</div>
-              <a class="video-link" href="https://www.youtube.com/watch?v=KRZ1ZGDEXC8" target="_blank" rel="noopener noreferrer">▶ Assistir robô hospitalar entregando refeições</a>
+              <p>O <strong>TUG</strong> é um robô móvel autônomo desenvolvido pela Aethon para automatizar a logística interna de hospitais, transportando até 453 kg de medicamentos, refeições, roupas e exames. Equipado com sensores LiDAR e integrado ao sistema do prédio para chamar elevadores e abrir portas sozinho, ele libera enfermeiros e equipes de apoio do transporte repetitivo, reduz o esforço físico e garante entregas seguras 24 horas por dia.</p>
+              <div class="impact"><strong>Impacto no trabalho:</strong> O <strong>TUG</strong> libera enfermeiros para focarem no cuidado humano ao paciente, melhora a ergonomia ao eliminar o transporte manual de carrinhos pesados e garante entregas hospitalares rápidas, seguras e rastreáveis 24 horas por dia.</div>
+              <a class="video-link" href="https://www.youtube.com/watch?v=kCDJObCNufg" target="_blank" rel="noopener noreferrer">▶ Assistir no YouTube</a>
             </div>
           </article>
         </div>
@@ -348,23 +318,6 @@
               <li>Os ganhos podem se concentrar em algumas empresas e grupos, ampliando desigualdades.</li>
             </ul>
           </article>
-        </div>
-        <div class="perspective"><p><strong>Perspectiva:</strong> não existe uma previsão única para todas as profissões. O resultado depende da tecnologia, dos custos, das regras de segurança e das escolhas de empresas, governos e trabalhadores. Aprender novas habilidades e planejar transições ajuda, mas não elimina a necessidade de políticas e oportunidades acessíveis.</p></div>
-      </div>
-    </section>
-    <section id="quiz">
-      <div class="wrap">
-        <div class="quiz-box">
-          <div><div class="eyebrow">Teste rápido</div><h2>Teste seus conhecimentos</h2><p>Responda a 5 questões objetivas sobre robôs e automação. Há perguntas de múltipla escolha e verdadeiro ou falso.</p></div>
-          <div>
-            <p class="quiz-progress" id="quiz-progress" aria-live="polite"></p>
-            <p class="quiz-question" id="quiz-question"></p>
-            <div class="quiz-choices" id="quiz-choices" role="group" aria-label="Alternativas da questão"></div>
-            <p class="quiz-feedback" id="quiz-feedback" aria-live="polite"></p>
-            <p class="quiz-result" id="quiz-result" aria-live="polite" hidden></p>
-            <button class="button button-primary quiz-action" id="quiz-next" type="button" hidden>Próxima pergunta</button>
-            <button class="button button-secondary quiz-action" id="quiz-restart" type="button" hidden>Refazer teste</button>
-          </div>
         </div>
       </div>
     </section>
@@ -431,113 +384,6 @@
       }
     });
 
-    const quizQuestions = [
-      {
-        question: "Verdadeiro ou falso: o robô cirúrgico da Vinci 5 realiza operações sem a participação de um cirurgião.",
-        choices: ["Verdadeiro", "Falso"],
-        answer: 1,
-        explanation: "O cirurgião controla o sistema; o robô reproduz os movimentos nos instrumentos."
-      },
-      {
-        question: "Qual tarefa é um exemplo de uso de robô industrial?",
-        choices: ["Soldar e montar peças em uma linha de produção", "Decidir sozinho o tratamento de um paciente", "Escolher as regras de segurança da fábrica"],
-        answer: 0,
-        explanation: "Braços robóticos são usados em tarefas como soldagem e montagem, com programação e supervisão."
-      },
-      {
-        question: "Verdadeiro ou falso: robôs agrícolas podem monitorar plantações e aplicar insumos de forma localizada.",
-        choices: ["Verdadeiro", "Falso"],
-        answer: 0,
-        explanation: "Sensores e visão computacional podem ajudar a identificar necessidades em diferentes partes do campo."
-      },
-      {
-        question: "O que um robô móvel pode fazer em um centro de distribuição?",
-        choices: ["Transportar caixas ou prateleiras entre áreas", "Substituir todas as decisões de uma equipe", "Definir as políticas de contratação"],
-        answer: 0,
-        explanation: "Robôs móveis apoiam o transporte interno; pessoas continuam organizando e supervisionando a operação."
-      },
-      {
-        question: "Verdadeiro ou falso: a adoção de robôs sempre elimina todos os empregos de uma profissão.",
-        choices: ["Verdadeiro", "Falso"],
-        answer: 1,
-        explanation: "A automação afeta tarefas de formas diferentes. Os efeitos dependem da profissão, do local e de como a tecnologia é adotada."
-      }
-    ];
-    let questionIndex = 0;
-    let quizScore = 0;
-    let questionAnswered = false;
-    const quizProgress = document.querySelector("#quiz-progress");
-    const quizQuestion = document.querySelector("#quiz-question");
-    const quizChoices = document.querySelector("#quiz-choices");
-    const quizFeedback = document.querySelector("#quiz-feedback");
-    const quizResult = document.querySelector("#quiz-result");
-    const quizNext = document.querySelector("#quiz-next");
-    const quizRestart = document.querySelector("#quiz-restart");
-
-    function renderQuestion() {
-      const currentQuestion = quizQuestions[questionIndex];
-      questionAnswered = false;
-      quizProgress.textContent = "Questão " + (questionIndex + 1) + " de " + quizQuestions.length;
-      quizQuestion.textContent = currentQuestion.question;
-      quizFeedback.textContent = "Escolha uma alternativa para conferir.";
-      quizFeedback.className = "quiz-feedback";
-      quizResult.hidden = true;
-      quizNext.hidden = true;
-      quizChoices.replaceChildren();
-      currentQuestion.choices.forEach((choice, index) => {
-        const button = document.createElement("button");
-        button.className = "quiz-choice";
-        button.type = "button";
-        button.textContent = choice;
-        button.addEventListener("click", () => answerQuestion(index));
-        quizChoices.append(button);
-      });
-    }
-
-    function answerQuestion(selectedIndex) {
-      if (questionAnswered) return;
-      questionAnswered = true;
-      const currentQuestion = quizQuestions[questionIndex];
-      const isCorrect = selectedIndex === currentQuestion.answer;
-      if (isCorrect) quizScore += 1;
-      quizFeedback.className = "quiz-feedback " + (isCorrect ? "correct" : "incorrect");
-      quizFeedback.textContent = (isCorrect ? "Correto! " : "Não é bem assim. ") + currentQuestion.explanation;
-      quizChoices.querySelectorAll(".quiz-choice").forEach((button, index) => {
-        button.disabled = true;
-        if (index === currentQuestion.answer) button.classList.add("correct-choice");
-        else if (index === selectedIndex) button.classList.add("wrong-choice");
-      });
-      quizNext.textContent = questionIndex === quizQuestions.length - 1 ? "Ver resultado" : "Próxima pergunta";
-      quizNext.hidden = false;
-    }
-
-    quizNext.addEventListener("click", () => {
-      if (questionIndex < quizQuestions.length - 1) {
-        questionIndex += 1;
-        renderQuestion();
-        return;
-      }
-      quizProgress.textContent = "Teste concluído";
-      quizQuestion.hidden = true;
-      quizChoices.hidden = true;
-      quizFeedback.hidden = true;
-      quizNext.hidden = true;
-      quizResult.textContent = "Você acertou " + quizScore + " de " + quizQuestions.length + " questões.";
-      quizResult.hidden = false;
-      quizRestart.hidden = false;
-    });
-
-    quizRestart.addEventListener("click", () => {
-      questionIndex = 0;
-      quizScore = 0;
-      quizQuestion.hidden = false;
-      quizChoices.hidden = false;
-      quizFeedback.hidden = false;
-      quizRestart.hidden = true;
-      renderQuestion();
-    });
-
-    renderQuestion();
   </script>
 </body>
 </html>
